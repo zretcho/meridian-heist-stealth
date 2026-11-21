@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>The Meridian Heist — a stealth game</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0a0a12;
+    color: #d8d2c0;
+    font-family: Georgia, 'Times New Roman', serif;
+    min-height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  h1 {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: normal;
+    color: #e8c96a;
+    text-transform: uppercase;
+  }
+  #game {
+    display: block;
+    width: min(960px, 96vw);
+    height: auto;
+    image-rendering: auto;
+    background: #101018;
+    border: 2px solid #3a3226;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+    cursor: crosshair;
+  }
+  #help {
+    font-size: 13px;
+    color: #8f887a;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 960px;
+  }
+  #help b { color: #d8d2c0; }
+</style>
+</head>
+<body>
+  <h1>The Meridian Heist</h1>
+  <canvas id="game" width="960" height="640"></canvas>
+  <div id="help">
+    <b>WASD / Arrow keys</b> move &nbsp;·&nbsp; <b>Shift</b> sneak (slow, quiet, harder to spot) &nbsp;·&nbsp;
+    <b>Click</b> toss a coin to distract a guard &nbsp;·&nbsp; <b>R</b> restart level &nbsp;·&nbsp; <b>P</b> pause<br>
+    Steal the Meridian Star, then slip out the green exit — unseen. Hide in the bushes, stay out of the yellow cones, and mind the dark corners.
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
